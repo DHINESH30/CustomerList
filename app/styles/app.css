@@ -1,0 +1,60 @@
+.content{
+    width: 76%;
+    height: 98%;
+    padding: 5px;
+    position:fixed;
+    bottom: 0;
+    right:0;
+    border:1px solid black;
+}
+.sidebar{
+    width: 20%;
+}
+
+.addButton{
+    float:right;
+    background-color: red;
+    color:white;
+    padding: 5px;
+}
+
+.addUser{
+    width:40%;
+    height: 60%;
+    position:absolute;
+    top:150px;
+    padding: 10px;
+    margin:10px;
+    border: 1px solid blue;
+    background-color: white;
+}
+table, tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+tr {
+    text-align: left;
+}
+
+th,td, tr {
+    padding: 10px;
+    padding-right: 200px;
+}
+
+.tableRow:hover {
+    background-color: blanchedalmond;
+}
+
+.customerDetailContent{
+    position:absolute;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 80%;
+    border:1px solid black;
+    background-color: white;
+    padding: 20px;
+}
+.closeButton{
+    float:right;
+}

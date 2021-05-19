@@ -7,6 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('sales', function() {
+    this.route('customers', function() {
+      this.route('details',{path: "/:key"});
+    });
+  });
 });
 
 export default Router;

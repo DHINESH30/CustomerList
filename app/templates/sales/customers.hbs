@@ -1,0 +1,32 @@
+<button class="addButton" {{action "ToggleAddCus" }}>Add +</button>
+<table>
+    <tr>
+        <th> NAME</th>
+        <th>USER ID</th>
+        <th> EMAIL</th>
+    </tr>
+    {{#each-in this.model as |key curCus|}}
+    <tr class="tableRow">
+        <td {{action "customerDetail" key}}>{{curCus.Name}}</td>
+        <td {{action "customerDetail" key}}>{{curCus.userId}}</td>
+        <td {{action "customerDetail" key}}>{{curCus.emailId}}</td>
+    </tr>
+    {{/each-in}}
+</table>
+{{#if this.isShowAddField}}
+<span class="addUser">
+    <p> <strong>Name:</strong>  {{input value=Name}} </p>
+    <p><strong>CusId:</strong> {{input value=cusId}} </p>
+    <p><strong>Email:</strong>  {{input value=Email}} </p>
+    <p><strong>Mobile:</strong> {{input value=Mobile}}</p>
+    <p><strong>Address:</strong> {{textarea value=address}}</p>
+    <button {{action "writeUserData" cusId Name Email Mobile address }} {{action "ToggleAddCus" }}>Save</button>
+</span>
+{{/if}}
+
+{{#if this.isShowCustomerDetail}}
+    <span class="customerDetailContent">
+        <button class="closeButton" {{action "closeCusDetail" }}>Close</button>
+        {{outlet}}
+    </span>
+{{/if}}

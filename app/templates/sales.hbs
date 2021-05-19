@@ -1,0 +1,10 @@
+<div class="sidebar" {{action "ToggleContent" }}>
+    {{#link-to "sales.customers"}}
+    <li>Customers</li>
+    {{/link-to}}
+</div>
+{{#if this.isShowContent}}
+<div class="content">
+    {{outlet}}
+</div>
+{{/if}}
