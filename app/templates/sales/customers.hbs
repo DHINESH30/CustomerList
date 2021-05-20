@@ -1,5 +1,5 @@
 <button class="closeButton" {{action "closeCus" }}>Close</button>
-<button class="addButton" {{action "ToggleAddCus" }}>+New</button>
+<button class="addButton" {{action "transAddUserRoute" }}>+New</button>
 <table>
     <tr>
         <th> NAME</th>
@@ -14,17 +14,5 @@
     </tr>
     {{/each-in}}
 </table>
-{{#if this.isShowAddField}}
-<span class="addUser">
-    <p> <strong>Name:</strong> {{input value=Name}} </p>
-    <p><strong>CusId:</strong> {{input value=cusId}} </p>
-    <p><strong>Email:</strong> {{input value=Email}} </p>
-    <p><strong>Mobile:</strong> {{input value=Mobile}}</p>
-    <p><strong>Address:</strong> {{textarea value=address}}</p>
-    <button class="button" {{action "writeUserData" cusId Name Email Mobile address }} {{action "ToggleAddCus"
-        }}>Save</button>
-    <button class="closeButton" {{action "ToggleAddCus" }}>cancel</button>
-</span>
-{{/if}}
 
 {{outlet}}

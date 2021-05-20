@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('sales', function() {
     this.route('customers', function() {
       this.route('details',{path: "/:Key"});
+      this.route('add-user');
     });
   });
 });

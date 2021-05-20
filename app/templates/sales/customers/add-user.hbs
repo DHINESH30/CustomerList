@@ -1,0 +1,9 @@
+<span class="addUser">
+    <p> <strong>Name:</strong> {{input value=model.namee}} </p>
+    <p><strong>CusId:</strong> {{input value=model.cusId}} </p>
+    <p><strong>Email:</strong> {{input value=model.email}} </p>
+    <p><strong>Mobile:</strong> {{input value=model.mobile}}</p>
+    <p><strong>Address:</strong> {{textarea value=model.address}}</p>
+    <button class="button" {{action "writeUserData" model }}>Save</button>
+    <button class="closeButton" {{action "close" }}>cancel</button>
+</span>
