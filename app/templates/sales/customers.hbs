@@ -1,4 +1,5 @@
-<button class="addButton" {{action "ToggleAddCus" }}>Add +</button>
+<button class="closeButton" {{action "closeCus" }}>Close</button>
+<button class="addButton" {{action "ToggleAddCus" }}>+New</button>
 <table>
     <tr>
         <th> NAME</th>
@@ -15,18 +16,15 @@
 </table>
 {{#if this.isShowAddField}}
 <span class="addUser">
-    <p> <strong>Name:</strong>  {{input value=Name}} </p>
+    <p> <strong>Name:</strong> {{input value=Name}} </p>
     <p><strong>CusId:</strong> {{input value=cusId}} </p>
-    <p><strong>Email:</strong>  {{input value=Email}} </p>
+    <p><strong>Email:</strong> {{input value=Email}} </p>
     <p><strong>Mobile:</strong> {{input value=Mobile}}</p>
     <p><strong>Address:</strong> {{textarea value=address}}</p>
-    <button {{action "writeUserData" cusId Name Email Mobile address }} {{action "ToggleAddCus" }}>Save</button>
+    <button class="button" {{action "writeUserData" cusId Name Email Mobile address }} {{action "ToggleAddCus"
+        }}>Save</button>
+    <button class="closeButton" {{action "ToggleAddCus" }}>cancel</button>
 </span>
 {{/if}}
 
-{{#if this.isShowCustomerDetail}}
-    <span class="customerDetailContent">
-        <button class="closeButton" {{action "closeCusDetail" }}>Close</button>
-        {{outlet}}
-    </span>
-{{/if}}
+{{outlet}}

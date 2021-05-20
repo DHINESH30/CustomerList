@@ -1,5 +1,8 @@
-<h2>{{this.model.Name}}</h2>
-<p><strong>userId:</strong> {{this.model.userId}}</p>
-<p><strong>Email:</strong> {{this.model.emailId}}</p>
-<p><strong>Mobile:</strong>{{this.model.Mobile}}</p>
-<p><strong>Address:</strong> {{this.model.Address}}</p>
+<span class="customerDetailContent">
+    <button class="closeButton" {{action "closeCusDetail" }}>Close</button>
+    <h2>{{this.model.Name}}</h2>
+    <p><strong>UserId:</strong> {{this.model.userId}}</p>
+    <p><strong>Email:</strong> {{this.model.emailId}}</p>
+    <p><strong>Mobile:</strong>{{this.model.Mobile}}</p>
+    <p><strong>Address:</strong> {{this.model.Address}}</p>
+</span>

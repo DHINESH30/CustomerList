@@ -8,15 +8,10 @@ export default Controller.extend({
         },
         customerDetail(key)
         {
-            this.setProperties({
-                isShowCustomerDetail:true
-            })
             this.transitionToRoute('sales.customers.details',key)
         },
-        closeCusDetail(){
-            this.setProperties({
-                isShowCustomerDetail:false
-            })
+        closeCus(){
+            this.transitionToRoute('sales')
         }
     }
 });
